@@ -21,7 +21,9 @@ c) The run time is O(n) linear
 
 Since dropped eggs and broken eggs are treated equally it is important to minimize the total number of drops.
 
-The best way to do this would be to treat it similar to a binary search and continue until you have two consecutive floors where the egg is undamaged and then broken. Essentially, the algorithm would stop when both the next floor to check is one floor away than the current floor and they have different values for if the egg breaks or not
+The best way to do this would be to treat it similar to a binary search and continue until you have two consecutive floors where the egg is undamaged and then broken. 
+
+You would check the floor that is halfway up the n-story building. If the egg breaks then you would then repeat this process on the lower half of the building and if it doesn't break on the upper half of the building. The algorithm would continue like this recursively and stop when both the next floor to check is one floor away than the current floor and they have different values for if the egg breaks or not.
 
 The run time complexity of this would be O(log n) since it does not need to 
 test for each value of n
